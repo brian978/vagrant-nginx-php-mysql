@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo systemctl stop mysqld
+sudo systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
+sudo systemctl start mysqld
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '<%= @mysql_password %>';"
+sudo mysql -u root -e "UPDATE mysql.user SET Host = '%' WHERE Host = 'localhost' AND User = 'root';"
+sudo systemctl stop mysqld
+sudo systemctl unset-environment MYSQLD_OPTS
+sudo systemctl restart mysqld.service

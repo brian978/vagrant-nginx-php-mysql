@@ -1,0 +1,1 @@
+default['config']['mysql']['password'] = '12345'
