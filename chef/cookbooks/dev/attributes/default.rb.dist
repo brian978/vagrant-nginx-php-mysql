@@ -1,0 +1,1 @@
+default['config']['system']['timezone'] = 'UTC'

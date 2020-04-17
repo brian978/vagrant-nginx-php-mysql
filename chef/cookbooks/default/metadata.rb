@@ -1,6 +1,0 @@
-name 'default'
-maintainer 'brian978'
-license 'GPL-3.0'
-description 'Cookbook for standard PHP dev environment'
-version '1.0.0'
-chef_version '>= 14.0'

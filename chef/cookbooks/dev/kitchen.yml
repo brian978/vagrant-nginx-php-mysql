@@ -21,4 +21,12 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: ubuntu-18.04
+  - name: centos-7
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:

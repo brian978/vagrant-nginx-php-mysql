@@ -7,3 +7,7 @@ Thumbs.db
 
 # Vagrant
 .vagrant
+
+# Chef
+attributes/*.rb
+chef/cookbooks/*/attributes/*.rb
