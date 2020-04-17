@@ -21,11 +21,12 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 3306, host: 33061
 
   # Synced folders
-  config.vm.synced_folder "www/", "/var/www", create: true, group: "nginx", owner: "nginx"
-  config.vm.synced_folder "data/", "/var/data", create: true, group: "nginx", owner: "nginx"
+  config.vm.synced_folder "www/", "/var/www", create: true
+  config.vm.synced_folder "data/", "/var/data", create: true
 
   # Server install
   config.vm.provision "shell", path: "provision/nginx.sh"
+  config.vm.provision "shell", path: "provision/php.sh"
   config.vm.provision "shell", path: "provision/mysql.sh"
 
   # chef provisioning
@@ -36,6 +37,8 @@ Vagrant.configure("2") do |config|
 
     chef.run_list = [
       "recipe[dev::default]",
+      "recipe[dev::php]",
+      "recipe[dev::nginx]",
       "recipe[dev::mysql]",
     ]
   end
