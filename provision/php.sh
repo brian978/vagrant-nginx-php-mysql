@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo curl https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer
+sudo curl https://phar.phpunit.de/phpunit-9.phar -o /usr/local/bin/phpunit && chmod +x /usr/local/bin/phpunit
+
 sudo yum install -y yum-utils
 sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-8.rpm
 sudo yum module reset -y php
