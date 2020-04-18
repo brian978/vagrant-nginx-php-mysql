@@ -25,4 +25,5 @@ end
 
 execute "nginx_enable_site" do
     command "sudo ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf && sudo systemctl restart nginx"
+    not_if { ::File.exist?('/etc/nginx/sites-enabled/default.conf') }
 end

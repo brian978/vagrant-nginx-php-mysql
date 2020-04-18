@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
 
   # Server install
   config.vm.provision "shell", path: "provision/nginx.sh"
-  config.vm.provision "shell", path: "provision/php.sh"
   config.vm.provision "shell", path: "provision/mysql.sh"
+  config.vm.provision "shell", path: "provision/php.sh"
 
   # chef provisioning
   config.vm.provision "chef_solo" do |chef|
