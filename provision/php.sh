@@ -17,6 +17,7 @@ sudo yum install -y php \
                     php-mbstring \
                     php-opcache \
                     php-pdo \
+                    php-pecl-mysql \
                     php-pecl-geoip \
                     php-pecl-imagick \
                     php-pecl-memcached \
