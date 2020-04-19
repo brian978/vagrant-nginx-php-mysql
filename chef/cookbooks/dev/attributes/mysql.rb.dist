@@ -1,1 +1,1 @@
-default['config']['mysql']['password'] = '12345'
+default['config']['mysql']['password'] = 'Test.12345'
