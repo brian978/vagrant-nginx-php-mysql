@@ -3,10 +3,11 @@
 sudo systemctl stop mysqld
 sudo systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
 sudo systemctl start mysqld
-sudo mysql -u root -e "UPDATE mysql.user SET Host = '%', authentication_string = '', password_expired = 'N' WHERE User = 'root' AND Host = 'localhost';"
+sudo mysql -u root -e "UPDATE mysql.user SET authentication_string = '', password_expired = 'N' WHERE User = 'root' AND Host = 'localhost';"
 sudo mysql -u root -e "FLUSH PRIVILEGES;"
 sudo systemctl stop mysqld
 sudo systemctl unset-environment MYSQLD_OPTS
 sudo systemctl start mysqld
-sudo mysql -u root -e "ALTER USER 'root'@'%' IDENTIFIED BY '<%= @password %>';"
+sudo mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '<%= @password %>';"
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '<%= @password %>';"
 sudo systemctl restart mysqld
