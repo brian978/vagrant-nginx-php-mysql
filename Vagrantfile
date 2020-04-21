@@ -37,9 +37,9 @@ Vagrant.configure("2") do |config|
 
     chef.run_list = [
       "recipe[dev::default]",
-      "recipe[dev::php]",
       "recipe[dev::nginx]",
       "recipe[dev::mysql]",
+      "recipe[dev::php]"
     ]
   end
 end
