@@ -10,7 +10,7 @@ rpm --import https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 sudo yum install -y yum-utils
 
 # Versioning
-sudo yum install git
+sudo yum install -y git
 
 # PHP
 sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-8.rpm
