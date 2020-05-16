@@ -3,6 +3,11 @@
 sudo curl https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && chmod +x /usr/local/bin/composer
 sudo curl https://phar.phpunit.de/phpunit-9.phar -o /usr/local/bin/phpunit && chmod +x /usr/local/bin/phpunit
 
+rpm --import http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
+rpm --import https://rpms.remirepo.net/RPM-GPG-KEY-remi2020
+rpm --import https://rpms.remirepo.net/RPM-GPG-KEY-remi2019
+rpm --import https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
+
 sudo yum install -y yum-utils
 sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-8.rpm
 sudo yum module reset -y php
