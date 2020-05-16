@@ -15,3 +15,15 @@ end
 execute "php_restart" do
     command "sudo systemctl restart php-fpm"
 end
+
+directory '/var/lib/php/opcache' do
+    group 'vagrant'
+end
+
+directory '/var/lib/php/session' do
+    group 'vagrant'
+end
+
+directory '/var/lib/php/wsdlcache' do
+    group 'vagrant'
+end
