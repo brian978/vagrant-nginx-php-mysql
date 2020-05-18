@@ -8,6 +8,7 @@ Thumbs.db
 # Vagrant
 .vagrant
 Vagrantfile
+data/
 
 # Chef
 attributes/*.rb
