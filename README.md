@@ -21,7 +21,7 @@ perfectly fine. If however you are doing a Wordpress installation I recommend th
 `chef/cookbooks/dev/templates/nginx/default.conf.erb` file.
 
 ## MySQL connection
-To connect to the MySQL server you need to use the following connection info:
+To connect to the MySQL server you need to use the following connection info (default):
 * hostname: 127.0.0.1
 * port: 33061
 * username: root
