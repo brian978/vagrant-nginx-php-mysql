@@ -8,8 +8,3 @@
 execute "update_timezone" do
     command "timedatectl set-timezone #{node['config']['system']['timezone']}"
 end
-
-# file locations
-if !Dir::exists?('/home/vagrant/scripts')
-    Dir::mkdir('/home/vagrant/scripts')
-end
