@@ -13,3 +13,6 @@ data/
 # Chef
 attributes/*.rb
 chef/cookbooks/*/attributes/*.rb
+
+# Git
+.gitmodules
